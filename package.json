@@ -6,16 +6,16 @@
   "description": "Idiomatic XMPP client, component & server library for node.js + browserify",
   "author": "Astro",
   "dependencies": {
-    "node-expat": ">=1.4.1",
-    "request": ">= 2.9.153",
-    "browser-request": ">= 0.2.0",
-    "faye-websocket": ">= 0.4.1",
-    "browserify": "~3.19.1",
     "brfs": "0.0.8",
-    "node-xmpp-component": "git+https://github.com/node-xmpp/node-xmpp-component.git",
+    "browser-request": ">= 0.2.0",
+    "browserify": "~3.19.1",
+    "faye-websocket": ">= 0.4.1",
+    "node-expat": "~2.3.8",
     "node-xmpp-client": "git+https://github.com/node-xmpp/node-xmpp-client.git",
+    "node-xmpp-component": "git+https://github.com/node-xmpp/node-xmpp-component.git",
+    "node-xmpp-core": "git+https://github.com/node-xmpp/node-xmpp-core.git",
     "node-xmpp-server": "git+https://github.com/node-xmpp/node-xmpp-server.git",
-    "node-xmpp-core": "git+https://github.com/node-xmpp/node-xmpp-core.git"
+    "request": ">= 2.9.153"
   },
   "devDependencies": {
     "mocha": ">=1.0.0",
