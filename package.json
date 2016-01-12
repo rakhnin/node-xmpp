@@ -5,7 +5,7 @@
   "description": "Idiomatic XMPP client, component & server library for node.js",
   "author": "Astro",
   "dependencies": {
-    "ltx": ">= 0.2.0",
+    "ltx": "0.9.1",
     "request": ">= 2.9.153",
     "node-xmpp-component": "~0.1.1",
     "node-xmpp-client": "~0.1.4",
