@@ -1,18 +1,21 @@
 {
   "name": "node-xmpp",
-  "version": "1.0.2",
-  "description": "XMPP for JavaScript",
+  "main": "./lib/node-xmpp",
+  "version": "0.12.2",
+  "description": "Idiomatic XMPP client, component & server library for node.js",
   "author": "Astro",
   "dependencies": {
-    "node-xmpp-client": "^3.0.0",
-    "node-xmpp-component": "^2.0.0",
-    "node-xmpp-core": "^5.0.0",
-    "node-xmpp-server": "^2.1.2"
+    "ltx": ">= 0.2.0",
+    "request": ">= 2.9.153",
+    "node-xmpp-component": "~0.1.1",
+    "node-xmpp-client": "~0.1.4",
+    "node-xmpp-server": "~0.3.1",
+    "node-xmpp-core": "~0.3.1"
   },
-  "devDependencies": {
-    "pem": "https://github.com/dodo/pem/tarball/altNames"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/node-xmpp/node-xmpp.git"
   },
-  "repository": "github:node-xmpp/node-xmpp",
   "homepage": "http://github.com/node-xmpp/node-xmpp",
   "bugs": "http://github.com/node-xmpp/node-xmpp/issues",
   "maintainers": [
@@ -49,11 +52,14 @@
     "dodo",
     "Markus Kohlhase"
   ],
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "engine": "node >=0.8.0",
   "scripts": {
-    "preversion": "npm test",
-    "unit": "mocha --recursive test/ -t 3000",
-    "lint": "standard",
-    "test": "npm run unit && npm run lint"
+    "test": "grunt test",
+    "browserify": "browserify -d -o node-xmpp-browser.js -r request:browser-request -i node-stringprep -i faye-websocket -i ./srv -i dns ./lib/node-xmpp-browserify.js"
   }
 }
